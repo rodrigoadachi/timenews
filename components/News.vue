@@ -62,7 +62,7 @@
       };
     },
     beforeMount(){
-      this.currentData = this.data.filter( el => el?.title)
+      this.currentData = this.data.filter( el => !!el?.author && !!el?.description && !!el?.title && !!el?.urlToImage)
     },
     computed: {
       currentSlide() {
